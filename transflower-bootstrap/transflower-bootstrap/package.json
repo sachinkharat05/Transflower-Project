@@ -1,0 +1,18 @@
+{
+  "name": "transflower-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Transflower store: Node/Express API (backend) + React/Vite SPA (frontend).",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "check:backend": "npm run check --prefix backend",
+    "db:init": "npm run db:init --prefix backend",
+    "db:test": "npm run db:test --prefix backend",
+    "db:setup-user": "npm run db:setup-user --prefix backend"
+  },
+  "keywords": ["flowers", "ecommerce", "express", "react", "vite"],
+  "license": "MIT"
+}

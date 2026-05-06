@@ -1,0 +1,27 @@
+{
+  "name": "transflower-backend",
+  "version": "1.0.0",
+  "description": "Transflower Express API (auth, catalog, cart, orders).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check scripts/initDb.js && node --check scripts/setupMysqlUser.js && node --check scripts/testDbConnection.js && node --check src/config/db.js && node --check src/seedData.js && node --check src/controllers/authController.js && node --check src/controllers/productController.js && node --check src/controllers/cartController.js && node --check src/controllers/orderController.js && node --check src/routes/authRoutes.js && node --check src/routes/cartRoutes.js && node --check src/routes/orderRoutes.js && node --check src/routes/productRoutes.js",
+    "db:setup-user": "node scripts/setupMysqlUser.js",
+    "db:init": "node scripts/initDb.js",
+    "db:test": "node scripts/testDbConnection.js"
+  },
+  "keywords": [
+    "flowers",
+    "ecommerce",
+    "express"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.22.3",
+    "transflower-monorepo": "file:.."
+  }
+}
